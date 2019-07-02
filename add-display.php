@@ -23,7 +23,7 @@
     </nav>
 </div>
 
-<div class="container">
+<div class="container" id="listing-container">
 
         <div class="row">
 
@@ -97,7 +97,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="zipcode">Zip Code *</label>
-                                    <input id="zipcode" type="text" name="zipcode" class="form-control" placeholder="Please enter zipcode *" required="required" data-error="Valid zip code is required.">
+                                    <input id="zipcode" type="text" name="zipcode" class="form-control" placeholder="Please enter zipcode *" required="required" maxlength="10" data-error="Valid zip code is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
