@@ -1,0 +1,27 @@
+<!-- # index.html - Script 9.8 -->
+<section class="threeColumns">
+<?php
+while ($listing = $r->fetch()) {
+?>
+
+    <div class="container">
+
+
+
+                      <div class="row">
+
+                            <div class="col-md-6">
+                                <?php echo "<span>" . $listing->getMlsNumber() . "</span>"; ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo "<span>" . $listing->getAddress() . "</span>"; ?>
+                            </div>
+                        </div>
+
+
+    </div>
+
+    <?php
+}
+?>
+</section>
