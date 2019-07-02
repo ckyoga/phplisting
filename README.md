@@ -41,6 +41,8 @@ Import the phplisting.sql file into the new `test` MySQL database
 
 Point your webserver document root to the "phplisting" folder
 
+Load up /add-display.php or /listings-display.php
+
 Author
 ------
 
