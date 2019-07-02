@@ -19,7 +19,7 @@ Clone or download the repository from github
 
 Checkout this repository and place the “phplisting” folder under your apache path.
 
-Create an MySQL database named 'test'
+Create a MySQL database named 'test'
 
 Create the following drupal user on your new MySQL database.
 - database user: userPHP
