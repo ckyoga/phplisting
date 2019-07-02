@@ -23,7 +23,7 @@ require('includes/header.inc.php');
 
             <p class="lead">This is a demo page to view real estate listings by using Bootstrap with a PHP and MySQL background.</p>
 
-            <table >
+            <table>
                 <tr>
                     <th>MLS #</th>
                     <th>Address</th>
@@ -32,7 +32,8 @@ require('includes/header.inc.php');
 
             <?php
 
-                $sql="SELECT mlsNumber, address, description FROM listings ORDER BY mlsNumber ASC "; // Query to get records from student table
+                // Get Listings from database
+                $sql="SELECT mlsNumber, address, description FROM listings ORDER BY mlsNumber ASC ";
                 $stmt = $pdo->query($sql);
                 $stmt->setFetchMode(PDO::FETCH_CLASS, 'Listing');
 

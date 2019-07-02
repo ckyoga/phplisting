@@ -12,6 +12,7 @@
 
 <body>
 
+<!-- View/Add Menu -->
 <div>
     <nav>
         <ul>

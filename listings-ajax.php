@@ -16,7 +16,6 @@ $mlsNumber =  (!empty($_POST['mlsNumber'])? $_POST['mlsNumber'] : '');
 $address = (!empty($_POST['address']) ? $_POST['address'] : '');
 $description = (!empty($_POST['description']) ? $_POST['description'] : '');
 
-//echo "mls " . $mlsNumber . "<br>";
 // Insert the listing:
 try {
 
@@ -24,7 +23,6 @@ try {
     $sql = "SELECT COUNT(*) FROM listings WHERE mlsNumber = :mlsNumber";
     $result = $pdo->prepare($sql);
     $result->execute(array(':mlsNumber' => $mlsNumber));
-//echo "1. " . $sql . "<br>";
 
     // If unique continue with the Insert
     if (!$result->fetchColumn()) {
@@ -32,7 +30,6 @@ try {
         $q = "INSERT INTO listings (mlsNumber, address, description) values (:mlsNumber, :address, :description)";
         $stmt = $pdo->prepare($q);
         $r = $stmt->execute(array(':mlsNumber' => $mlsNumber, ':address' => $address, ':description' => $description));
-//echo "2. " . $q . "<br>";
 
         $responseArray = array('type' => 'success', 'message' => $okMessage);
 
@@ -56,6 +53,4 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
 // else just display the message
 else {
     echo $responseArray['message'];
-    echo "with " . $_SERVER['HTTP_X_REQUESTED_WITH'] . "<br>";
-    echo "strlower" . $_SERVER['HTTP_X_REQUESTED_WITH'] . "<br>";
 }
